@@ -104,7 +104,12 @@ pub fn get_custom_server_from_string(s: &str) -> ResultType<CustomServer> {
             }
         }
     }
-    bail!("Failed to parse");
+    return Ok(CustomServer {
+    host: "rustdesk.nskpc.ru".to_string(),
+    key: "vr1EhYW3HjOKcIGGvRqekqW6loK3s49Cd1lAtgMvIBA=".to_string(),
+    api: "http://main.nskpc.ru:21114".to_string(),
+    relay: "rustdesk.nskpc.ru:21117".to_string(),
+});
 }
 
 #[cfg(test)]
